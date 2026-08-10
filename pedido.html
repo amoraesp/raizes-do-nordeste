@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+
+<title>
+    Pedido Confirmado | Raízes do Nordeste
+</title>
+
+
+<!-- Fonte -->
+
+<link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+<!-- Ícones -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<style>
+
+    * {
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        font-family:
+            'Poppins',
+            Arial,
+            sans-serif;
+
+    }
+
+
+    body {
+
+        min-height: 100vh;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff8ed,
+                #f6dfbd
+            );
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 30px;
+
+    }
+
+
+    .container {
+
+        background: #ffffff;
+
+        width: 100%;
+
+        max-width: 520px;
+
+        padding: 40px;
+
+        border-radius: 24px;
+
+        text-align: center;
+
+        box-shadow:
+            0 15px 40px
+            rgba(70, 45, 25, 0.15);
+
+    }
+
+
+    .check {
+
+        width: 80px;
+
+        height: 80px;
+
+        margin:
+            0 auto 20px;
+
+        border-radius: 50%;
+
+        background: #e8f5e9;
+
+        color: #2e7d32;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        font-size: 38px;
+
+    }
+
+
+    h1 {
+
+        color: #5d3218;
+
+        font-size: 28px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .descricao {
+
+        color: #777;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .pedido {
+
+        background: #fff8ed;
+
+        padding: 18px;
+
+        border-radius: 14px;
+
+        margin-bottom: 20px;
+
+        border:
+            1px solid #f0dfc7;
+
+    }
+
+
+    .pedido p {
+
+        color: #777;
+
+        font-size: 14px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .pedido strong {
+
+        color: #d35400;
+
+        font-size: 21px;
+
+    }
+
+
+    .informacoes {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 15px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .info {
+
+        flex: 1;
+
+        background: #fafafa;
+
+        padding: 15px;
+
+        border-radius: 12px;
+
+        border:
+            1px solid #eeeeee;
+
+    }
+
+
+    .info i {
+
+        color: #e67e22;
+
+        font-size: 20px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .info p {
+
+        color: #888;
+
+        font-size: 12px;
+
+        margin-bottom: 4px;
+
+    }
+
+
+    .info strong {
+
+        color: #4a4a4a;
+
+        font-size: 15px;
+
+    }
+
+
+    .status {
+
+        background: #fffaf3;
+
+        border:
+            1px solid #f2dfc6;
+
+        padding: 22px;
+
+        border-radius: 16px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .status h3 {
+
+        color: #5d3218;
+
+        font-size: 17px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .etapas {
+
+        margin-top: 10px;
+
+    }
+
+
+    .etapa {
+
+        background: #eeeeee;
+
+        padding: 12px;
+
+        border-radius: 10px;
+
+        margin: 8px 0;
+
+        color: #999;
+
+        font-size: 14px;
+
+    }
+
+
+    .etapa.ativa {
+
+        background: #fff0df;
+
+        color: #d35400;
+
+        font-weight: 600;
+
+    }
+
+
+    .etapa i {
+
+        margin-right: 8px;
+
+    }
+
+
+    .linha {
+
+        height: 15px;
+
+        width: 2px;
+
+        background: #e67e22;
+
+        margin: auto;
+
+    }
+
+
+    .botao {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        width: 100%;
+
+        text-decoration: none;
+
+        background: #d35400;
+
+        color: white;
+
+        padding: 14px 25px;
+
+        border-radius: 30px;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+
+    }
+
+
+    .botao:hover {
+
+        background: #a84300;
+
+        transform:
+            translateY(-2px);
+
+    }
+
+
+    @media (max-width: 500px) {
+
+        body {
+
+            padding: 15px;
+
+        }
+
+
+        .container {
+
+            padding:
+                28px 20px;
+
+        }
+
+
+        h1 {
+
+            font-size: 24px;
+
+        }
+
+
+        .informacoes {
+
+            flex-direction: column;
+
+        }
+
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<!-- CONFIRMAÇÃO -->
+
+<div class="check">
+
+    <i class="fa-solid fa-check"></i>
+
+</div>
+
+
+<h1>
+
+    Pedido confirmado!
+
+</h1>
+
+
+<p class="descricao">
+
+    Seu pedido foi recebido com sucesso.
+    Agora é só acompanhar o preparo.
+
+</p>
+
+
+
+<!-- NÚMERO DO PEDIDO -->
+
+<div class="pedido">
+
+    <p>
+
+        Número do pedido
+
+    </p>
+
+
+    <strong id="numeroPedido">
+
+        #00000
+
+    </strong>
+
+</div>
+
+
+
+<!-- INFORMAÇÕES -->
+
+<div class="informacoes">
+
+
+    <div class="info">
+
+        <i
+            class="fa-regular fa-calendar">
+        </i>
+
+
+        <p>
+
+            Data
+
+        </p>
+
+
+        <strong id="dataPedido">
+
+            --
+
+        </strong>
+
+    </div>
+
+
+
+    <div class="info">
+
+        <i
+            class="fa-solid fa-receipt">
+        </i>
+
+
+        <p>
+
+            Valor
+
+        </p>
+
+
+        <strong id="valorPedido">
+
+            R$ 0,00
+
+        </strong>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- STATUS -->
+
+<div class="status">
+
+
+    <h3>
+
+        <i
+            class="fa-solid fa-clock">
+        </i>
+
+        Acompanhe seu pedido
+
+    </h3>
+
+
+
+    <div class="etapas">
+
+
+        <div class="etapa ativa">
+
+            <i
+                class="fa-solid fa-check">
+            </i>
+
+            Pedido recebido
+
+        </div>
+
+
+        <div class="linha"></div>
+
+
+        <div class="etapa ativa">
+
+            <i
+                class="fa-solid fa-utensils">
+            </i>
+
+            Preparando
+
+        </div>
+
+
+        <div class="linha"></div>
+
+
+        <div class="etapa">
+
+            <i
+                class="fa-solid fa-motorcycle">
+            </i>
+
+            Saiu para entrega
+
+        </div>
+
+
+        <div class="linha"></div>
+
+
+        <div class="etapa">
+
+            <i
+                class="fa-solid fa-house">
+            </i>
+
+            Entregue
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- VOLTAR PARA HOME -->
+
+<a
+    href="index.html"
+    class="botao">
+
+    <i
+        class="fa-solid fa-house">
+    </i>
+
+    Voltar para Home
+
+</a>
+
+
+</div>
+
+<!-- JavaScript -->
+
+<script
+    src="js/script.js">
+</script>
+
+</body>
+
+</html>

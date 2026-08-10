@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+
+<title>
+    Carrinho | Raízes do Nordeste
+</title>
+
+
+<!-- Fonte -->
+
+<link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+<!-- Ícones -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- CSS -->
+
+<link
+    rel="stylesheet"
+    href="css/style.css">
+
+
+<style>
+
+    .carrinho-box {
+
+        background: #ffffff;
+
+        border-radius: 18px;
+
+        padding: 25px;
+
+        box-shadow:
+            0 8px 25px
+            rgba(0, 0, 0, 0.08);
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .tabela-carrinho {
+
+        width: 100%;
+
+        border-collapse: collapse;
+
+    }
+
+
+    .tabela-carrinho th {
+
+        text-align: left;
+
+        padding: 15px 10px;
+
+        color: #5d3218;
+
+        border-bottom:
+            2px solid #f0dfc7;
+
+        font-size: 14px;
+
+    }
+
+
+    .tabela-carrinho td {
+
+        padding: 16px 10px;
+
+        border-bottom:
+            1px solid #eeeeee;
+
+        color: #555;
+
+        font-size: 14px;
+
+    }
+
+
+    .tabela-carrinho th:nth-child(2),
+    .tabela-carrinho td:nth-child(2) {
+
+        text-align: center;
+
+    }
+
+
+    .tabela-carrinho th:nth-child(3),
+    .tabela-carrinho td:nth-child(3) {
+
+        text-align: right;
+
+    }
+
+
+    .resumo {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        margin-top: 25px;
+
+        padding-top: 20px;
+
+        border-top:
+            1px solid #eeeeee;
+
+    }
+
+
+    .resumo span {
+
+        color: #777;
+
+        font-size: 15px;
+
+    }
+
+
+    .resumo strong {
+
+        color: #d35400;
+
+        font-size: 24px;
+
+    }
+
+
+    .acoes {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 15px;
+
+        margin-top: 25px;
+
+    }
+
+
+    .btn-voltar {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        text-decoration: none;
+
+        color: #d35400;
+
+        font-weight: 600;
+
+        padding: 12px 18px;
+
+    }
+
+
+    .btn-finalizar {
+
+        border: none;
+
+        cursor: pointer;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        background: #d35400;
+
+        color: white;
+
+        padding: 14px 24px;
+
+        border-radius: 30px;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+
+    }
+
+
+    .btn-finalizar:hover {
+
+        background: #a84300;
+
+        transform:
+            translateY(-2px);
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .carrinho-box {
+
+            padding: 15px;
+
+        }
+
+
+        .tabela-carrinho th,
+        .tabela-carrinho td {
+
+            padding: 12px 5px;
+
+            font-size: 12px;
+
+        }
+
+
+        .resumo {
+
+            align-items: flex-end;
+
+        }
+
+
+        .acoes {
+
+            flex-direction: column;
+
+            align-items: stretch;
+
+        }
+
+
+        .btn-voltar,
+        .btn-finalizar {
+
+            width: 100%;
+
+        }
+
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header>
+
+
+<div class="container">
+
+
+    <div class="logo">
+
+        <h1>
+            Raízes do Nordeste
+        </h1>
+
+        <p>
+            Sabores que contam histórias.
+        </p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="cardapio.html">
+            Cardápio
+        </a>
+
+        <a href="fidelidade.html">
+            Fidelidade
+        </a>
+
+        <a href="carrinho.html">
+            Carrinho
+        </a>
+
+
+        <span id="usuarioMenu">
+
+            <a href="login.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                Entrar
+
+            </a>
+
+        </span>
+
+    </nav>
+
+
+</div>
+
+
+</header>
+
+<!-- =========================
+     CONTEÚDO
+========================= -->
+
+<main class="container">
+
+
+<section class="titulo-pagina">
+
+    <h2>
+        Meu Carrinho
+    </h2>
+
+
+    <p>
+
+        Confira os produtos selecionados
+        antes de finalizar seu pedido.
+
+    </p>
+
+</section>
+
+
+
+<div class="carrinho-box">
+
+
+    <table
+        id="listaCarrinho"
+        class="tabela-carrinho">
+
+
+        <thead>
+
+            <tr>
+    <th>Produto</th>
+    <th>Quantidade</th>
+    <th>Valor</th>
+    <th>Ação</th>
+</tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <!-- Produtos carregados pelo script.js -->
+
+        </tbody>
+
+
+    </table>
+
+
+
+    <!-- =========================
+         TOTAL
+    ========================= -->
+
+    <div class="resumo">
+
+        <span>
+            Total do pedido
+        </span>
+
+
+        <strong id="total">
+
+            R$ 0,00
+
+        </strong>
+
+    </div>
+
+
+
+    <!-- =========================
+         BOTÕES
+    ========================= -->
+
+    <div class="acoes">
+
+
+        <a
+            href="cardapio.html"
+            class="btn-voltar">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Continuar comprando
+
+        </a>
+
+
+        <div style="margin-top: 25px;">
+
+        <button
+            type="button"
+            class="btn-secundario"
+            onclick="esvaziarCarrinho()">
+
+            Esvaziar Carrinho
+
+        </button>
+
+        <button
+            type="button"
+            onclick="irParaPagamento()"
+            class="btn-finalizar">
+
+            Finalizar Pedido
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+</main>
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+
+<p>
+
+    © 2026 - Raízes do Nordeste |
+    Sabores que contam histórias.
+
+</p>
+
+
+</footer>
+
+<!-- JavaScript -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
