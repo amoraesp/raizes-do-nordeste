@@ -1,0 +1,558 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Criar Cadastro | Raízes do Nordeste
+    </title>
+
+
+    <!-- Fonte -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Ícones -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+
+    <style>
+
+        .cadastro-container {
+
+            width: 90%;
+            max-width: 500px;
+
+            margin: 60px auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 0, 0, 0.10);
+
+        }
+
+
+        .cadastro-titulo {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .cadastro-icone {
+
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background: #fff0df;
+
+            color: #d35400;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+
+        }
+
+
+        .cadastro-titulo h2 {
+
+            color: #5d3218;
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .cadastro-titulo p {
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        .campo-cadastro {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .campo-cadastro label {
+
+            display: block;
+
+            color: #5d3218;
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .campo-cadastro input {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            font-size: 15px;
+
+            outline: none;
+
+        }
+
+
+        .campo-cadastro input:focus {
+
+            border-color: #d35400;
+
+        }
+
+
+        .termos {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            margin: 20px 0;
+
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .termos input {
+
+            width: 17px;
+
+            height: 17px;
+
+            margin-top: 2px;
+
+            accent-color: #d35400;
+
+        }
+
+
+        .termos a {
+
+            color: #d35400;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+        }
+
+
+        .btn-cadastro {
+
+            width: 100%;
+
+            border: none;
+
+            cursor: pointer;
+
+            padding: 14px;
+
+            border-radius: 30px;
+
+            background: #d35400;
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn-cadastro:hover {
+
+            background: #a84300;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .login-link {
+
+            text-align: center;
+
+            margin-top: 22px;
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        .login-link a {
+
+            color: #d35400;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+        }
+
+
+        .voltar-home {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            color: #777;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+        }
+
+
+        .voltar-home:hover {
+
+            color: #d35400;
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .cadastro-container {
+
+                width: 92%;
+
+                margin: 30px auto;
+
+                padding: 25px 18px;
+
+            }
+
+
+            .cadastro-titulo h2 {
+
+                font-size: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="container">
+
+            <div class="logo">
+
+                <h1>
+                    Raízes do Nordeste
+                </h1>
+
+                <p>
+                    Sabores que contam histórias.
+                </p>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="cardapio.html">
+                    Cardápio
+                </a>
+
+                <a href="fidelidade.html">
+                    Fidelidade
+                </a>
+
+                <a href="carrinho.html">
+                    Carrinho
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CADASTRO -->
+
+    <main>
+
+        <div class="cadastro-container">
+
+
+            <div class="cadastro-titulo">
+
+                <div class="cadastro-icone">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+
+                <h2>
+                    Criar cadastro
+                </h2>
+
+
+                <p>
+                    Crie sua conta para fazer pedidos
+                    e participar do programa de fidelidade.
+                </p>
+
+            </div>
+
+
+            <!--
+                IMPORTANTE:
+                Os IDs abaixo correspondem aos IDs
+                utilizados pela função cadastrarUsuario()
+                no script.js.
+            -->
+
+            <form onsubmit="cadastrarUsuario(event)">
+
+
+                <!-- NOME -->
+
+                <div class="campo-cadastro">
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                        required>
+
+                </div>
+
+
+                <!-- E-MAIL -->
+
+                <div class="campo-cadastro">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+
+                </div>
+
+
+                <!-- SENHA -->
+
+                <div class="campo-cadastro">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <!-- CONFIRMAR SENHA -->
+
+                <div class="campo-cadastro">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        placeholder="Digite a senha novamente"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <!-- TERMOS / LGPD -->
+
+                <div class="termos">
+
+                    <input
+                        type="checkbox"
+                        id="termos"
+                        required>
+
+
+                    <label for="termos">
+
+                        Li e aceito os
+
+                        <a href="lgpd.html">
+                            termos e a política de privacidade
+                        </a>.
+
+                    </label>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="submit"
+                    class="btn-cadastro">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Criar conta
+
+                </button>
+
+
+            </form>
+
+
+            <div class="login-link">
+
+                Já possui uma conta?
+
+                <a href="login.html">
+                    Entrar
+                </a>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="voltar-home">
+
+                <i class="fa-solid fa-house"></i>
+
+                Voltar para Home
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © 2026 - Raízes do Nordeste |
+            Sabores que contam histórias.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+```
