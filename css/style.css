@@ -1,0 +1,703 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FFF8F0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background: #8B4513;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 34px;
+}
+
+.logo p {
+    color: #FFD166;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    background: #E67E22;
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #D35400;
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    display: inline-block;
+
+    color: #8B4513;
+
+    background: transparent;
+
+    border: 2px solid #8B4513;
+
+    padding: 13px 30px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background: #8B4513;
+    color: white;
+}
+
+
+/* ========================================
+   HERO DA HOME
+======================================== */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 70px 0 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+
+/* ========================================
+   TEXTO DO HERO
+======================================== */
+
+.hero-texto {
+    width: 100%;
+}
+
+.hero-texto .subtitulo {
+    color: #8B4513;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.hero-texto h2 {
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    color: #2f2f2f;
+
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   BOTÕES DA HOME
+======================================== */
+
+.botoes {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 0 0 5px;
+}
+
+.botoes .btn,
+.botoes .btn-secundario {
+    margin: 0;
+}
+
+
+/* ========================================
+   IMAGEM PRINCIPAL
+======================================== */
+
+.hero-imagem {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+.hero-imagem img {
+    display: block;
+
+    width: 100%;
+
+    height: 480px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   TÍTULOS DAS PÁGINAS
+======================================== */
+
+section h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.titulo-pagina {
+    text-align: center;
+
+    margin: 50px 0;
+}
+
+.titulo-pagina p {
+    color: #666;
+
+    font-size: 18px;
+
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   DESTAQUES
+======================================== */
+
+.destaques {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 70px auto;
+
+    text-align: center;
+}
+
+.destaques h2 {
+    color: #5d3218;
+
+    margin-bottom: 10px;
+}
+
+.destaques > p {
+    color: #666;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 60px;
+}
+
+.card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+.card span {
+    display: block;
+
+    color: #E67E22;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    display: block;
+
+    width: 100%;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+main {
+    min-height: 70vh;
+}
+
+
+/* ========================================
+   TABELAS
+======================================== */
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #8B4513;
+
+    color: white;
+
+    padding: 12px;
+}
+
+td {
+    padding: 15px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* ========================================
+   FORMULÁRIOS
+======================================== */
+
+form {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    background: #8B4513;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+
+/* ========================================
+   RESPONSIVO - TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    header .container {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 45px 0 0;
+    }
+
+    .hero-texto h2 {
+        font-size: 38px;
+    }
+
+    .hero-imagem img {
+        height: 380px;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVO - CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .logo h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        gap: 12px;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        width: 90%;
+
+        padding: 35px 0 0;
+    }
+
+    .hero-texto h2 {
+        font-size: 30px;
+    }
+
+    .hero-texto p {
+        font-size: 15px;
+    }
+
+    .botoes {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-bottom: 5px;
+    }
+
+    .botoes .btn,
+    .botoes .btn-secundario {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .hero-imagem img {
+        height: 280px;
+
+        border-radius: 14px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ==========================
+LOGO DO CABEÇALHO
+========================== */
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .logo img {
+    width: 130px;
+    height: 95px;
+    object-fit: contain;
+    display: block;
+}
+
+header .logo-texto h1 {
+    color: white;
+    font-size: 34px;
+    margin: 0;
+}
+
+header .logo-texto p {
+    color: #FFD166;
+    font-size: 14px;
+    margin-top: 5px;
+}
+/* ========================================
+   SELETOR DE UNIDADE DO CARDÁPIO
+======================================== */
+
+#unidade {
+    width: 350px;
+    max-width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 45px;
+}
+
+/* Centraliza a área da unidade */
+.unidade-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Espaço entre o seletor e os produtos */
+#listaProdutos {
+    margin-top: 20px;
+}
+/* ========================================
+   BOTÃO EXCLUIR DO CARRINHO
+======================================== */
+
+.btn-excluir {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-excluir:hover {
+    background: #a93226;
+}
+/* =========================
+   PROMOÇÃO DA SEMANA
+========================= */
+
+.promocao {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.promocao-conteudo {
+    background: #fff0df;
+    border: 2px solid #f2c38b;
+    border-radius: 18px;
+    padding: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.promocao-icone {
+    font-size: 45px;
+    flex-shrink: 0;
+}
+
+.promocao-texto {
+    flex: 1;
+}
+
+.promocao-texto span {
+    color: #d35400;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.promocao-texto h2 {
+    color: #5d3218;
+    font-size: 26px;
+    margin: 5px 0 8px;
+}
+
+.promocao-texto p {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+}
+
+.promocao .btn {
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+    .promocao-conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+
+    .promocao-texto h2 {
+        font-size: 22px;
+    }
+
+    .promocao-texto p {
+        font-size: 14px;
+    }
+
+    .promocao .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
